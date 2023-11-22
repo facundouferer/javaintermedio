@@ -1,10 +1,7 @@
 package BasesDeDatos.Empresa;
+import javax.persistence.*;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-
-public class Main {
+class Main {
     public static void main(String[] args) {
         // Crear el EntityManagerFactory
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("EmpleadoPersistencia");
@@ -14,7 +11,7 @@ public class Main {
 
         // Operaciones con la base de datos
         Empleado empleado = new Empleado();
-        empleado.setNombre("Rita Celeste");
+        empleado.setNombre("Carlos");
 
         // Iniciar una transacción
         entityManager.getTransaction().begin();
